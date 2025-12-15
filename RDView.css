@@ -24,6 +24,7 @@
 	--interval: 2;
 	--delay: 0;
 	--pulse: 1;
+	--subdivision: 1;
 }
 .event.group{
 	--group-width: 1;
