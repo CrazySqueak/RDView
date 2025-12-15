@@ -19,11 +19,11 @@
 	--offset-grayscale: 0;
 	--offset-opacity: 100;
 	--tick: 1;
-	--swing: 1;
 	--loop: 0;
 	--interval: 2;
 	--delay: 0;
 	--pulse: 1;
+	--subdivision: 1;
 }
 .event.group{
 	--group-width: 1;
@@ -1099,8 +1099,8 @@
 		&>div.classicbeat {
 			display: grid;
 			grid-template-columns: repeat(3,
-				calc((var(--tick) / 3 - var(--swing)) * 28px)
-				calc((var(--swing) * 28px)));
+				calc((var(--tick) / 3 - var(--swing,calc(var(--tick)/6))) * 28px)
+				calc((var(--swing,calc(var(--tick)/6)) * 28px)));
 			position: absolute;
 			width: calc(var(--tick) * 28px);
 			height: inherit;
